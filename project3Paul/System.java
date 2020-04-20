@@ -1,9 +1,14 @@
 public class System {
-   public static void main(String[] args){
+   public System(){
    
    }
    
    public void openMenu() {
       new Menu();
+   }
+   
+      
+   public void checkOut() {
+
    }
 }

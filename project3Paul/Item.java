@@ -23,8 +23,4 @@ public class CategoryItem {
    public int getStatus() {
       return status;
    }
-   
-   public void checkOut() {
-      this.status = 1;
-   }
 }

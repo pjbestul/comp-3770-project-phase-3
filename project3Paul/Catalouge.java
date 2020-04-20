@@ -8,7 +8,7 @@ public class Catalouge {
       items.add(new CategoryItem("Test Device", "Device"));
    }
    
-   public Item findItem(String title) {
+   public CategoryItem findItem(String title) {
       return null;
    }
 }
