@@ -23,4 +23,8 @@ public class CategoryItem {
    public int getStatus() {
       return status;
    }
+   
+   public void setStatus(int state) {
+      this.status = state;
+   }
 }
