@@ -9,7 +9,13 @@ public class LibrarySystem {
    
       
    public void checkOut(CategoryItem item) {
-      item.setStatus(1);
+      if(item.getStatus() == 0){
+         item.setStatus(1);
+         System.out.println("Item checked out. Returning to menu");
+      }
       
+      else{
+         System.out.println("Item not available for checkout. Returning to menu");
+      }
    }
 }
