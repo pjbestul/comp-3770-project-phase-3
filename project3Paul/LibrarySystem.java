@@ -10,5 +10,6 @@ public class LibrarySystem {
       
    public void checkOut(CategoryItem item) {
       item.setStatus(1);
+      
    }
 }

@@ -2,6 +2,9 @@ public class CategoryItem {
    String title;
    String type;
    int status = 0;
+   public CategoryItem() {
+      this.status = 0;
+   }
    
    public CategoryItem(String title, String type) {
       this.title = title;
@@ -19,9 +22,5 @@ public class CategoryItem {
    
    public int getStatus() {
       return status;
-   }
-   
-   public void setStatus(int state) {
-      this.status = state;
    }
 }
