@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+//Use Case #2: Checking Out an Item From the Library
+//Author: Paul Bestul
 public class Main {
    public static void main(String[] args){
       System.out.println("Welcome to the Library");
@@ -21,6 +23,8 @@ class Menu {
       this.system = new LibrarySystem();
    }
    
+   //Handles Menu Options.
+   //Only does check outs and logging out in this case.
    public boolean selectOption() {
       Scanner scan = new Scanner(System.in);
 
@@ -53,6 +57,7 @@ class Menu {
       }
    }
    
+   //Initiates the catalouge in this use case
    public void openCatalouge(Catalouge catalouge) {
       this.catalouge = catalouge;
    }
@@ -64,6 +69,7 @@ class Catalouge {
       addTest();
    }
    
+   //Used to test this use case
    public void addTest() {
       CategoryItem item1 = new CategoryItem("Test Book", "Book");
       CategoryItem item2 = new CategoryItem("Test Movie", "Movie");
@@ -73,6 +79,7 @@ class Catalouge {
       this.items.add(item3);
    }
    
+   //Searches Catalouge Database for item. Returns dummy item if not found
    public CategoryItem findItem(String title) {
       CategoryItem query = new CategoryItem("Item Not Found", "None");
       for(int i = 0; i < items.size(); i++) {
@@ -93,7 +100,8 @@ class LibrarySystem {
       return new Menu();
    }
    
-      
+   //Checks out the selected item
+   //Checks to see if item is available for checkout first.   
    public void checkOut(CategoryItem item) {
       if(item.getStatus() == 0){
          item.setStatus(1);
@@ -117,18 +125,24 @@ class CategoryItem {
       this.status = 0;
    }
    
+   //Returns title of item
    public String getTitle() {
       return title;
    }
    
+   //Returns type of item
    public String getType() {
       return type;
    }
    
+   //Returns status of item(checked out/available)
    public int getStatus() {
       return status;
    }
    
+   //Tracks whether item is checked out or not.
+   //Checked Out = 1
+   //Available = 0
    public void setStatus(int state) {
       this.status = state;
    }
